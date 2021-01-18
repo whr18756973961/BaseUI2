@@ -1,0 +1,3 @@
+include ':baseui'
+include ':app'
+rootProject.name = "BaseUI2"

@@ -1,0 +1,11 @@
+package com.whr.baseui.bean
+
+enum class ViewStatusEnum {
+    SHOWWAITDIALOG,
+    HIDEWAITDIALOG,
+    SHOWTOAST,
+    SHOWSTATUSEMPTYVIEW,
+    SHOWSTATUSERRORVIEW,
+    SHOWSTATUSLOADINGVIEW,
+    HIDESTATUSVIEW
+}
