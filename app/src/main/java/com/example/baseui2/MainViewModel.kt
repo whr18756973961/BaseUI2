@@ -6,4 +6,7 @@ import com.whr.baseui.mvvm.BaseViewModel
 
 class MainViewModel : BaseViewModel() {
     var test: MutableLiveData<String> = MutableLiveData()
+    fun requestTestData(){
+       showWaitDialog()
+    }
 }
