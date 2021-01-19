@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.Transformation
+import com.google.gson.Gson
 import java.lang.Exception
 
 fun ImageView.loadImage(url: String) {

@@ -13,18 +13,28 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:text="@{mainVM.test}"/>
+
         <!--单向绑定@{}-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{mainVM.test}"
+            android:text="@{mainVM.edit}"
+            android:layout_marginTop="50dp"
             android:textColor="@color/black"
             android:textSize="25dp" />
         <!--双向绑定@={}-->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={mainVM.test}"
+            android:text="@={mainVM.edit}"
+            android:layout_marginTop="50dp"
             android:textSize="25dp" />
     </LinearLayout>
 

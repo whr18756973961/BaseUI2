@@ -20,10 +20,6 @@ class MainActivity : BaseMvvmActivity<ActivityMainBinding,MainViewModel>() {
 
     override fun initView(rootView: View) {
         mViewModel.requestTestData()
-        Handler().postDelayed(
-            {
-                hideWaitDialog()
-            },2000)
     }
 
 }

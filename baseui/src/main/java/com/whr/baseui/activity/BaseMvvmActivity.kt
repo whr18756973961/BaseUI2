@@ -513,20 +513,13 @@ abstract class BaseMvvmActivity<V : ViewDataBinding, VM : BaseViewModel> : Swipe
             val top = l[1]
             val bottom = top + v.height
             val right = left + v.width
-            return if (event.x > left && event.x < right
-                && event.y > top && event.y < bottom
-            ) {
-                // 点击EditText的事件，忽略它。
-                false
-            } else {
-                true
-            }
+            return event.x <= left || event.x >= right || event.y <= top || event.y >= bottom
         }
         // 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditView上，和用户用轨迹球选择其他的焦点
         return false
     }
 
-    fun hideSystemSoftInput() {
+   private fun hideSystemSoftInput() {
         val view = window.peekDecorView()
         if (view != null && view.windowToken != null) {
             val im = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

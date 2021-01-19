@@ -13,7 +13,7 @@ class Result<T> {
 
     var code: Int = 0
     var message: String? = null
-    var data: T? = null
+    var result: T? = null
     var exception: String? = null
     var exception_msg: String? = null
     var ok: Boolean = true

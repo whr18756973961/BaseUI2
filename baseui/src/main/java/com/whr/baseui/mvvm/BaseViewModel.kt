@@ -155,7 +155,7 @@ open class BaseViewModel : ViewModel(), LifecycleObserver, BaseMvvmView {
 
     suspend fun <T> getResopnse(response: Result<T>?): T? {
         if (response == null || EmptyUtils.isEmpty(response)) return null
-        if (response.code == 0) return response.data
+        if (response.code == 0) return response.result
         else return null
     }
 
@@ -171,7 +171,7 @@ open class BaseViewModel : ViewModel(), LifecycleObserver, BaseMvvmView {
                 callResponse(
                     response,
                     {
-                        successBlock(response?.data)
+                        successBlock(response?.result)
                     },
                     {
                         catchBlock(response?.message)
